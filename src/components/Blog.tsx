@@ -4,7 +4,7 @@ import { tagColor } from "../lib/tagColors";
 
 export function Blog() {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+    <section className="mx-auto max-w-4xl px-4 py-6 sm:px-6">
       <h2 className="mb-8 text-2xl font-bold text-[var(--color-text)]">
         Blog
       </h2>

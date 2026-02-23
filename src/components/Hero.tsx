@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+    <section className="mx-auto max-w-4xl px-4 py-6 sm:px-6">
       <div className="flex flex-col items-center text-center">
         <div className="w-full rounded-xl bg-[var(--color-surface)] p-6 text-left">
           <p className="mb-2 text-2xl font-medium text-[var(--color-text)]">

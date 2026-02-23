@@ -3,7 +3,7 @@ import { projects } from "../data/projects";
 
 export function ThingsLearned() {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+    <section className="mx-auto max-w-4xl px-4 py-6 sm:px-6">
       <h2 className="mb-4 text-2xl font-bold text-[var(--color-text)]">
         Things I&apos;ve learned
       </h2>
