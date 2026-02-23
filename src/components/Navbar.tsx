@@ -13,6 +13,7 @@ export function Navbar() {
           href="/"
           className="text-lg font-semibold text-[var(--color-text)] no-underline hover:no-underline"
         >
+          <img src = "/vite.svg" alt = "Logo" className="inline-block h-6 w-6 mr-2" />
           {SITE_NAME}
         </a>
         <div className="flex items-center gap-3">
@@ -29,8 +30,11 @@ export function Navbar() {
             )}
           </button>
           <a
-            href="#contact"
+            href="https://t.me/racenodev"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg border border-[var(--color-border)] bg-[var(--color-text)] px-4 py-2 text-sm font-medium text-[var(--color-page-bg)] no-underline transition hover:opacity-90"
+            style = {{ textDecoration: 'none' }}
           >
             Get in touch
           </a>

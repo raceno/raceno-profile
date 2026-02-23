@@ -3,13 +3,15 @@ import { posts } from "../data/posts";
 import { tagColor } from "../lib/tagColors";
 
 export function Blog() {
+  const sortedPosts = [...posts].sort((a, b) => Number(b.year) - Number(a.year));
+
   return (
     <section className="mx-auto max-w-4xl px-4 py-6 sm:px-6">
       <h2 className="mb-8 text-2xl font-bold text-[var(--color-text)]">
         Blog
       </h2>
       <div className="grid gap-5 sm:grid-cols-2">
-        {posts.map((post) => (
+        {sortedPosts.map((post) => (
           <Link
             key={post.slug}
             to={`/blog/${post.slug}`}
