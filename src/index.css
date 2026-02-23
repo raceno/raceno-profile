@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: add .dark on html to enable */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Light (default) */
+  --color-page-bg: #ffffff;
+  --color-surface: #f3f4f6;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #6366f1;
+
+  /* Tag Colors */
+  --color-tag-web3: #8b5cf6; /* Purple */
+  --color-tag-blockchain: #4cbb7d; /* Teal */
+  --color-tag-programming: #10b981; /* Green */
+  --color-tag-javascript: #f7df1e; /* Yellow */
+  --color-tag-devops: #ec4899; /* Pink */
+  --color-tag-containers: #22d3ee; /* Cyan */
+  --color-tag-cloud: #3b82f6; /* Blue */
+  --color-tag-mobile: #f97316; /* Orange */
+  --color-tag-architecture: #9333ea; /* Violet */
+  --color-tag-performance: #3b82f6; /* Light Blue */
+  --color-tag-api: #fbbf24; /* Amber */
+  --color-tag-agile: #38bdf8; /* Sky Blue */
+  --color-tag-database: #e11d48; /* Red */
+  --color-tag-typescript: #3178c6; /* Blue */
+  --color-tag-reactjs: #61dafb; /* Light Blue */
+  --color-tag-redux: #764abc; /* Purple */
+  --color-tag-typeorm: #f97316; /* Orange */
+  --color-tag-vuejs: #42b883; /* Green */
+  --color-tag-microservices: #2dd4bf; /* Teal */
+  --color-tag-serverless: #0ea5e9; /* Sky Blue */
+  --color-tag-smartcontracts: #2563eb; /* Blue */
+  --color-tag-npm: #f44336; /* Red */
+  --color-tag-testing: #f9a8d4; /* Pink */
+  --color-tag-ci-cd: #10b981; /* Green */
+  --color-tag-graphql: #e535ab; /* Magenta */
+  --color-tag-grpc: #09f7a0; /* Green */
+  --color-tag-svelte: #ff3e00; /* Red */
+  --color-tag-webassembly: #6b21a8; /* Purple */
+  --color-tag-ethereum: #3c3c3d; /* Dark Gray */
+  --color-tag-ai: #ef4444; /* Red */
+  --color-tag-quantumcomputing: #4f46e5; /* Indigo */
+  --color-tag-security: #9333ea; /* Violet */
+  --color-tag-metaverse: #3b82f6; /* Light Blue */
+  --color-tag-mobileweb: #a855f7; /* Purple */
+  --color-tag-solidity: #363636; /* Dark Gray */
+  --color-tag-flutter: #02569b; /* Dark Blue */
+  --color-tag-githubactions: #1e40af; /* Blue */
+  --color-tag-solidityethereum2: #1d4ed8; /* Blue */
+  --color-tag-blockchainapps: #9333ea; /* Violet */
+  --color-tag-edgecomputing: #ea580c; /* Orange */
+  --color-tag-lowcodenocode: #14b8a6; /* Teal */
+  --color-tag-quantumalgorithms: #a855f7; /* Purple */
+  --color-tag-agi: #4b5563; /* Dark Gray */
+  --color-tag-daos: #d97706; /* Yellow */
+  --color-tag-crossplatformapps: #3b82f6; /* Light Blue */
+  --color-tag-codegeneration: #f97316; /* Orange */
+  --color-tag-quantumcryptography: #9ca3af; /* Gray */
+  --color-tag-defi: #0284c7; /* Dark Blue */
+  --color-tag-predictivedevelopment: #84cc16; /* Green */
+  --color-tag-automatedtesting: #db2777; /* Pink */
+  --color-tag-appdevelopment: #3b82f6; /* Light Blue */
+  --color-tag-smartcontractsblockchain2: #6366f1; /* Blue */
+  /* Additional tag colors for all blog tags */
+  --color-tag-web-development: #2563eb;
+  --color-tag-frontend-development: #7c3aed;
+  --color-tag-frontend: #6366f1;
+  --color-tag-react: #61dafb;
+  --color-tag-software-engineering: #059669;
+  --color-tag-software-development: #0d9488;
+  --color-tag-framework-comparison: #8b5cf6;
+  --color-tag-backend-development: #0e7490;
+  --color-tag-scalability: #0891b2;
+  --color-tag-nodejs: #339933;
+  --color-tag-rest: #f59e0b;
+  --color-tag-infrastructure: #64748b;
+  --color-tag-deployment: #dc2626;
+  --color-tag-kubernetes: #326ce5;
+  --color-tag-cloud-native: #0284c7;
+  --color-tag-aws: #ff9900;
+  --color-tag-lambda: #ff9900;
+  --color-tag-aws-lambda: #ff9900;
+  --color-tag-distributed-systems: #0f766e;
+  --color-tag-websockets: #0ea5e9;
+  --color-tag-real-time: #06b6d4;
+  --color-tag-pwa: #5b21b6;
+  --color-tag-progressive-web-apps: #6d28d9;
+  --color-tag-cross-platform: #c026d3;
+  --color-tag-decentralization: #4f46e5;
+  --color-tag-governance: #b45309;
+  --color-tag-interoperability: #0d9488;
+  --color-tag-zero-trust: #be123c;
+  --color-tag-quality-assurance: #ca8a04;
+  --color-tag-automation: #c026d3;
+  --color-tag-machine-learning: #be185d;
+  --color-tag-future-tech: #4f46e5;
+  --color-tag-algorithms: #7c2d12;
+  --color-tag-virtual-reality: #6b21a8;
+}
+
+.dark {
+  --color-page-bg: #1e1e1e;
+  --color-surface: #2d2d2d;
+  --color-text: #f9fafb;
+  --color-text-muted: #9ca3af;
+  --color-border: #374151;
+  --color-accent: #818cf8;
+
+  /* Dark Tag Colors */
+  --color-tag-web3: #a78bfa; /* Light Purple */
+  --color-tag-blockchain: #2dd4bf; /* Teal */
+  --color-tag-programming: #34d399; /* Light Green */
+  --color-tag-javascript: #f59e0b; /* Yellow */
+  --color-tag-devops: #ec4899; /* Pink */
+  --color-tag-containers: #67e8f9; /* Light Cyan */
+  --color-tag-cloud: #60a5fa; /* Light Blue */
+  --color-tag-mobile: #fb923c; /* Light Orange */
+  --color-tag-architecture: #d4bdfb; /* Lavender */
+  --color-tag-performance: #3b82f6; /* Light Blue */
+  --color-tag-api: #fb923c; /* Light Orange */
+  --color-tag-agile: #38bdf8; /* Sky Blue */
+  --color-tag-database: #f87171; /* Light Red */
+  --color-tag-typescript: #60a5fa; /* Light Blue */
+  --color-tag-reactjs: #61dafb; /* Light Blue */
+  --color-tag-redux: #a5b4fc; /* Light Purple */
+  --color-tag-typeorm: #f97316; /* Orange */
+  --color-tag-vuejs: #34d399; /* Light Green */
+  --color-tag-microservices: #3b82f6; /* Light Blue */
+  --color-tag-serverless: #0ea5e9; /* Sky Blue */
+  --color-tag-smartcontracts: #6366f1; /* Blue */
+  --color-tag-npm: #f44336; /* Red */
+  --color-tag-testing: #fbbf24; /* Amber */
+  --color-tag-ci-cd: #10b981; /* Green */
+  --color-tag-graphql: #e72f80; /* Magenta */
+  --color-tag-grpc: #09f7a0; /* Green */
+  --color-tag-svelte: #ff3e00; /* Red */
+  --color-tag-webassembly: #6b21a8; /* Purple */
+  --color-tag-ethereum: #6b7280; /* Gray */
+  --color-tag-ai: #ef4444; /* Red */
+  --color-tag-quantumcomputing: #8b5cf6; /* Purple */
+  --color-tag-security: #9333ea; /* Violet */
+  --color-tag-metaverse: #60a5fa; /* Light Blue */
+  --color-tag-mobileweb: #a855f7; /* Purple */
+  --color-tag-solidity: #363636; /* Dark Gray */
+  --color-tag-flutter: #02569b; /* Dark Blue */
+  --color-tag-githubactions: #1e40af; /* Blue */
+  --color-tag-solidityethereum2: #3b82f6; /* Blue */
+  --color-tag-blockchainapps: #9333ea; /* Violet */
+  --color-tag-edgecomputing: #ea580c; /* Orange */
+  --color-tag-lowcodenocode: #14b8a6; /* Teal */
+  --color-tag-quantumalgorithms: #a855f7; /* Purple */
+  --color-tag-agi: #9ca3af; /* Gray */
+  --color-tag-daos: #d97706; /* Yellow */
+  --color-tag-crossplatformapps: #3b82f6; /* Light Blue */
+  --color-tag-codegeneration: #f97316; /* Orange */
+  --color-tag-quantumcryptography: #9ca3af; /* Gray */
+  --color-tag-defi: #0284c7; /* Dark Blue */
+  --color-tag-predictivedevelopment: #84cc16; /* Green */
+  --color-tag-automatedtesting: #db2777; /* Pink */
+  --color-tag-appdevelopment: #3b82f6; /* Light Blue */
+  --color-tag-smartcontractsblockchain2: #6366f1; /* Blue */
+  /* Additional tag colors for all blog tags (dark) */
+  --color-tag-web-development: #60a5fa;
+  --color-tag-frontend-development: #a78bfa;
+  --color-tag-frontend: #818cf8;
+  --color-tag-react: #61dafb;
+  --color-tag-software-engineering: #34d399;
+  --color-tag-software-development: #2dd4bf;
+  --color-tag-framework-comparison: #a78bfa;
+  --color-tag-backend-development: #22d3ee;
+  --color-tag-scalability: #67e8f9;
+  --color-tag-nodejs: #4ade80;
+  --color-tag-rest: #fbbf24;
+  --color-tag-infrastructure: #94a3b8;
+  --color-tag-deployment: #f87171;
+  --color-tag-kubernetes: #60a5fa;
+  --color-tag-cloud-native: #38bdf8;
+  --color-tag-aws: #fb923c;
+  --color-tag-lambda: #fb923c;
+  --color-tag-aws-lambda: #fb923c;
+  --color-tag-distributed-systems: #5eead4;
+  --color-tag-websockets: #38bdf8;
+  --color-tag-real-time: #22d3ee;
+  --color-tag-pwa: #c4b5fd;
+  --color-tag-progressive-web-apps: #a78bfa;
+  --color-tag-cross-platform: #e879f9;
+  --color-tag-decentralization: #818cf8;
+  --color-tag-governance: #fdba74;
+  --color-tag-interoperability: #2dd4bf;
+  --color-tag-zero-trust: #fb7185;
+  --color-tag-quality-assurance: #fcd34d;
+  --color-tag-automation: #e879f9;
+  --color-tag-machine-learning: #f472b6;
+  --color-tag-future-tech: #818cf8;
+  --color-tag-algorithms: #fdba74;
+  --color-tag-virtual-reality: #a78bfa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Smooth theme transition for main surfaces */
+.bg-\[var\(--color-page-bg\)\],
+.bg-\[var\(--color-surface\)\],
+.border-\[var\(--color-border\)\] {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Blog article prose: readable line length and spacing */
+.blog-prose {
+  max-width: 65ch;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.blog-prose p {
+  margin-bottom: 1.25em;
+}
+
+.blog-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-prose h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.blog-prose h3 {
+  margin-top: 1.25em;
+  margin-bottom: 0.4em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.blog-prose code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: var(--color-surface);
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-border);
+}
+
+.blog-prose pre {
+  margin: 1em 0;
+  padding: 1rem;
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+.blog-prose pre code {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.blog-prose-inline-code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: var(--color-surface);
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-border);
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.blog-prose li {
+  margin-bottom: 0.35em;
+}
+
+.blog-prose blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 4px solid var(--color-border);
+  color: var(--color-text-muted);
+}
