@@ -8,14 +8,6 @@ import { getPostBySlug } from "../data/posts";
 import { tagColor } from "../lib/tagColors";
 import { useTheme } from "../context/ThemeContext";
 
-const WORDS_PER_MINUTE = 200;
-
-function readingTimeMinutes(text: string): number {
-  const stripped = text.replace(/```[\s\S]*?```/g, "").replace(/[#*_`\[\]()]/g, " ");
-  const words = stripped.trim().split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
-}
-
 export function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const { isDark } = useTheme();
@@ -41,7 +33,6 @@ export function BlogPostPage() {
   }
 
   const body = post.body;
-  const minRead = readingTimeMinutes(body);
 
   const markdownComponents: Components = {
     code({ node, className, children, ...props }) {
@@ -84,11 +75,6 @@ export function BlogPostPage() {
       <h1 className="mb-4 text-3xl font-bold tracking-tight text-[var(--color-text)] sm:text-4xl">
         {post.title}
       </h1>
-      <p className="mb-6 flex flex-wrap items-center gap-2 text-sm text-[var(--color-text-muted)]">
-        <span>{post.year}</span>
-        <span aria-hidden>·</span>
-        <span>{minRead} min read</span>
-      </p>
       {post.tags.length > 0 && (
         <div className="mb-8 flex flex-wrap gap-2">
           {post.tags.map((tag) => (
