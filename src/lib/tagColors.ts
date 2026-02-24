@@ -87,6 +87,33 @@ const TAG_COLORS: Record<string, string> = {
   /* Other */
   Agile: "var(--color-tag-agile)",
   WebAssembly: "var(--color-tag-webassembly)",
+  /* Extended tags from newer posts */
+  GoLang: "var(--color-tag-golang)",
+  Rust: "var(--color-tag-rust)",
+  Go: "var(--color-tag-go)",
+  Python: "var(--color-tag-python)",
+  Observability: "var(--color-tag-observability)",
+  Monitoring: "var(--color-tag-monitoring)",
+  Cloudflare: "var(--color-tag-cloudflare)",
+  Fastly: "var(--color-tag-fastly)",
+  Deno: "var(--color-tag-deno)",
+  WebTransport: "var(--color-tag-webtransport)",
+  Backend: "var(--color-tag-backend-development)",
+  ".NET": "var(--color-tag-dotnet)",
+  "C#": "var(--color-tag-csharp)",
+  "Software Architecture": "var(--color-tag-software-architecture)",
+  "Legacy Systems": "var(--color-tag-legacy-systems)",
+  Maintenance: "var(--color-tag-maintenance)",
+  MLOps: "var(--color-tag-mlops)",
+  "Production Systems": "var(--color-tag-production-systems)",
+  java: "var(--color-tag-java)",
+  microservices: "var(--color-tag-microservices)",
+  scalability: "var(--color-tag-scalability)",
+  performance: "var(--color-tag-performance)",
+  kubernetes: "var(--color-tag-kubernetes)",
+  "distributed-systems": "var(--color-tag-distributed-systems)",
+  backend: "var(--color-tag-backend-development)",
+  engineering: "var(--color-tag-software-engineering)",
 };
 
 export function tagColor(tag: string): string {

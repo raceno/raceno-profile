@@ -17,14 +17,18 @@ export function Hero() {
           <p className="mb-2 font-medium text-[var(--color-text)]">
             Some things I’ve built over the years:
           </p>
-          <ul className="mb-4 list-disc space-y-1 pl-5 text-[var(--color-text-muted)]">
-            <li><b>A freelance platform</b> — built from scratch using JavaScript and PHP, juggling client demands, bug reports at midnight, and the occasional “why isn’t this working?” panic. It grew into a system people actually relied on every day.</li>
+          <ul className="mb-4 list-disc space-y-1 pl-5 text-[var(--color-text)]">
             <li>
-              <b>A fantasy football game</b> — backend in Java, frontend in JavaScript, handling thousands of users and insane traffic spikes every Sunday. Learned quickly that users will absolutely break everything if you don’t plan for it.
+              <b>An e-commerce recommendation engine</b><br />backend in Python, using ML models for personalized suggestions. Realized quickly that predictions are useless without proper caching, latency tuning, and monitoring.
             </li>
-            <li><b>An NFT-style game</b> — coded in C# and JavaScript, shipping before NFTs were even cool. Fun, messy, and full of edge cases that taught me how to build systems that don’t fall apart under weird conditions.</li>
             <li>
-              <b>Smart contract tool</b> — a small project in JavaScript that automated trustless refunds for blockchain transactions. Simple in concept, but taught me how to write clean, production-ready code that other developers could rely on.
+              <b>A CI/CD pipeline visualizer</b><br />coded in Python and React, tracking hundreds of builds per day. Learned that observability isn’t optional—without proper logging and alerting, engineers panic unnecessarily.
+            </li>
+            <li>
+              <b>A crypto portfolio tracker</b><br />built with C# and Go, handling thousands of users querying live exchange rates. Every weekend felt like a stress test, teaching me how to scale queues, retries, and alerting systems under real-world volatility.
+            </li>
+            <li>
+              <b>A microservice orchestration dashboard</b><br />built with Java and Angular, helping ops teams visualize hundreds of services. Learned how to make a system both powerful and readable, so humans could actually trust it under pressure.
             </li>
           </ul>
           <p className="text-sm text-[var(--color-text-muted)]" id="contact">
